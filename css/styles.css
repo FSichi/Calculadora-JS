@@ -1,0 +1,152 @@
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.app {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100vw;
+  height: 100vh;
+  background: -webkit-linear-gradient(top left, rgb(20, 20, 20) 0%, rgb(185, 99, 202) 100%);
+  background: -o-linear-gradient(top left,  rgb(20, 20, 20) 0%, rgb(185, 99, 202) 100%);
+  background: linear-gradient(to bottom right,  rgb(20, 20, 20) 0%, rgb(185, 99, 202) 100%); 
+}
+
+.calculadora {
+  width: 350px;
+  height: 500px;
+  background: transparent;
+  border-radius: 15px;
+  position: relative; 
+  margin: 0 auto;
+}
+
+.calculadora::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px black;
+  opacity: .3; 
+}
+
+.nav-bar {
+  width: 100%;
+  height: 50px;
+  background: rgb(92, 40, 214);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 2rem;
+  border-bottom: 1px solid grey;
+  border-radius: 15px 15px 0 0; 
+}
+
+.nav-bar::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 10px;
+  height: 10px;
+  background: green;
+  border-radius: 50%;
+  box-shadow: 20px 0 0 grey,
+  -20px 0 0 red; 
+}
+
+
+.pantalla{
+  width: 100%;
+  height: 120px;
+  text-align: right;
+  padding-right: 1rem;
+  padding-top: .5rem;
+  background: rgb(204, 180, 248); 
+}
+
+.pantalla-superior{
+  font-size: 1.5rem; 
+}
+
+.pantalla-inferior{
+  font-size: 4rem; 
+}
+
+.botones{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 5px;
+  margin-top: 5px; 
+}
+
+.btn{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1em;
+  font-size: 1.21rem;
+  background: white;
+  position: relative;
+  z-index: 100; 
+}
+
+.btn:first-child{
+  background: #8162f3;
+}
+
+.btn:nth-child(2),.btn:nth-child(3){
+  background: rgb(77, 224, 163); 
+}
+
+.btn:nth-child(4n) {
+  background: rgb(77, 224, 163); 
+}
+
+.btn:nth-child(17) {
+  border-bottom-left-radius: 15px; 
+}
+
+.btn:last-child {
+  border-bottom-right-radius: 15px; 
+}
+
+.btn:not(:nth-child(18)):hover {
+  background: rgb(94, 54, 238);
+  cursor: pointer; 
+}
+
+.creditos{
+  margin: 0 auto;
+  color: antiquewhite;
+  text-align: center;
+  font-size: 40px;
+}
+
+.creditos img{
+  width: 400px;
+  height: 180px;
+  margin-bottom: 20px;
+}
+
+
+.creditos .redes-sociales .btn-red-social {
+  padding: 15px 18px;
+  min-width: 120px;
+  border-radius: 5px;
+  background: #33257E;
+  color: #fff;
+  font-size: 30px;
+  margin: 0 10px;
+  transition: .3s ease all;
+}
+
+.redes-sociales .btn-red-social:hover {
+  box-shadow: 0px 0px 30px 10px #40db6e;
+}
